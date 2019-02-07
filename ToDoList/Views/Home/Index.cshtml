@@ -1,0 +1,27 @@
+﻿
+<html>
+<head>
+</head>
+<body>
+    @model List<ToDoList.Models.Chores>
+    <h1> To Do List</h1>
+    <form asp-action="Create" asp-controller="Home">
+        <div>
+            <input name="ItemName" />
+            <input type="submit" value="Add" />
+        </div>
+    </form>
+    <div>
+        <ul>
+            @foreach (var each in Model)
+            {
+                <li><lable>@each.Item</lable></li>
+
+            }
+            <li><lable>Something</lable></li>
+
+        </ul>
+    </div>
+
+</body>
+</html> 
